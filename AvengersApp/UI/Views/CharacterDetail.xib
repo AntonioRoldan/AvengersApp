@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailViewController" customModule="AvengersApp" customModuleProvider="target">
+            <connections>
+                <outlet property="characterImage" destination="KPy-bz-jhz" id="k91-2E-aO0"/>
+                <outlet property="characterPower" destination="7xw-jK-duB" id="bH7-aB-sKa"/>
+                <outlet property="collectionView" destination="k0U-x7-wZ0" id="iZ2-Mz-27v"/>
+                <outlet property="collectionViewHeightConstraint" destination="yEk-Rx-fDE" id="Tam-ts-5zu"/>
+                <outlet property="flowLayout" destination="lpe-mh-syN" id="F9E-i6-84z"/>
+                <outlet property="powerImage" destination="7xw-jK-duB" id="f5c-Ix-oCO"/>
+                <outlet property="view" destination="iN0-l3-epB" id="1NQ-Wv-B7T"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KPy-bz-jhz">
+                    <rect key="frame" x="31.5" y="103" width="351" height="209"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="351" id="Nq7-yD-zRr"/>
+                        <constraint firstAttribute="height" constant="209" id="aO2-Lt-6BV"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHN-Oq-7JQ">
+                    <rect key="frame" x="248" y="322" width="91" height="37"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_stars_0" translatesAutoresizingMaskIntoConstraints="NO" id="7xw-jK-duB">
+                    <rect key="frame" x="20" y="322" width="207" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Ywj-1I-Gxk"/>
+                        <constraint firstAttribute="width" constant="207" id="msJ-eR-yzo"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9G-cN-wGy">
+                    <rect key="frame" x="354" y="324.5" width="40" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="EsY-g1-bxc"/>
+                        <constraint firstAttribute="height" constant="34.5" id="Ly1-wU-cmD"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="pencil" catalog="system"/>
+                    <connections>
+                        <action selector="editPower:" destination="-1" eventType="touchUpInside" id="jlW-FD-4zx"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="k0U-x7-wZ0">
+                    <rect key="frame" x="10" y="367" width="394" height="85"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="85" id="yEk-Rx-fDE"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lpe-mh-syN">
+                        <size key="itemSize" width="100" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="k0U-x7-wZ0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="02r-LN-I6j"/>
+                <constraint firstItem="V9G-cN-wGy" firstAttribute="leading" secondItem="QHN-Oq-7JQ" secondAttribute="trailing" constant="15" id="4j5-8b-39P"/>
+                <constraint firstItem="7xw-jK-duB" firstAttribute="top" secondItem="KPy-bz-jhz" secondAttribute="bottom" constant="10" id="BmT-W3-qMV"/>
+                <constraint firstItem="QHN-Oq-7JQ" firstAttribute="top" secondItem="KPy-bz-jhz" secondAttribute="bottom" constant="10" id="SxE-Wy-XZk"/>
+                <constraint firstItem="KPy-bz-jhz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="103" id="Tu0-pw-9tW"/>
+                <constraint firstItem="V9G-cN-wGy" firstAttribute="top" secondItem="KPy-bz-jhz" secondAttribute="bottom" constant="10" id="W8P-6b-Gv4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="V9G-cN-wGy" secondAttribute="trailing" constant="20" id="ZIv-do-LIs"/>
+                <constraint firstItem="KPy-bz-jhz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aRv-Tv-Zgv"/>
+                <constraint firstItem="7xw-jK-duB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="d27-XF-C4h"/>
+                <constraint firstItem="k0U-x7-wZ0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="jEz-1F-b2c"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="k0U-x7-wZ0" secondAttribute="trailing" constant="10" id="mLG-3r-Anp"/>
+                <constraint firstItem="k0U-x7-wZ0" firstAttribute="top" secondItem="QHN-Oq-7JQ" secondAttribute="bottom" constant="8" id="rRB-Kf-v27"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="80.357142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_stars_0" width="99" height="17"/>
+        <image name="pencil" catalog="system" width="64" height="56"/>
+    </resources>
+</document>

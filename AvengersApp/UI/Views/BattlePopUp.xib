@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BattlePopUpViewController" customModule="AvengersApp" customModuleProvider="target">
+            <connections>
+                <outlet property="popUpView" destination="fib-sK-MGj" id="UCV-sW-PDs"/>
+                <outlet property="view" destination="iN0-l3-epB" id="dww-5l-iuE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fib-sK-MGj">
+                    <rect key="frame" x="57" y="348" width="300" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press button below to delete battle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2k-oY-yyR">
+                            <rect key="frame" x="71.5" y="26" width="157" height="92"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="92" id="8fK-qg-NeM"/>
+                                <constraint firstAttribute="width" constant="157" id="NPv-t3-Oxh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAT-eH-80q">
+                            <rect key="frame" x="272" y="26.5" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="GS8-LN-UmV"/>
+                                <constraint firstAttribute="width" constant="20" id="ccU-gU-719"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="multiply.circle" catalog="system"/>
+                            <connections>
+                                <action selector="close:" destination="-1" eventType="touchUpInside" id="4ml-Nb-kS3"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="KAT-eH-80q" firstAttribute="top" secondItem="fib-sK-MGj" secondAttribute="top" constant="26" id="KcN-bp-Ue8"/>
+                        <constraint firstAttribute="width" constant="300" id="ZzJ-Ve-lpC"/>
+                        <constraint firstAttribute="trailing" secondItem="KAT-eH-80q" secondAttribute="trailing" constant="8" id="axB-YY-0Y1"/>
+                        <constraint firstItem="f2k-oY-yyR" firstAttribute="centerX" secondItem="fib-sK-MGj" secondAttribute="centerX" id="p1e-ge-lo1"/>
+                        <constraint firstAttribute="height" constant="200" id="pzW-t4-RrA"/>
+                        <constraint firstItem="f2k-oY-yyR" firstAttribute="top" secondItem="fib-sK-MGj" secondAttribute="top" constant="26" id="zq9-Vy-pnC"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eX-4k-2Ec">
+                    <rect key="frame" x="188" y="465" width="38" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="C84-Jw-3gb"/>
+                        <constraint firstAttribute="height" constant="37.5" id="ON2-Ux-yNG"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="bin.xmark.fill" catalog="system"/>
+                    <connections>
+                        <action selector="deleteBattle:" destination="-1" eventType="touchUpInside" id="95q-PK-t63"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="1eX-4k-2Ec" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="188" id="5S8-uj-Wml"/>
+                <constraint firstItem="fib-sK-MGj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="D1i-56-5F7"/>
+                <constraint firstItem="1eX-4k-2Ec" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="420" id="IwU-hX-kAW"/>
+                <constraint firstItem="fib-sK-MGj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="neO-ES-KLr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="80.357142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bin.xmark.fill" catalog="system" width="64" height="46"/>
+        <image name="multiply.circle" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
